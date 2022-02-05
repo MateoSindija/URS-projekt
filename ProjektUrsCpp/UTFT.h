@@ -137,6 +137,7 @@ class UTFT
 		void setBackColor(word color);
 		word getBackColor();
 		void print(const char *st, int x, int y, int deg=0);
+		void printWithMargin(const char *st, int x, int y, int limit=39);
 		//void print(String st, int x, int y, int deg=0);
 		void printNumI(long num, int x, int y, int length=0, char filler=' ');
 		void printNumF(double num, byte dec, int x, int y, char divider='.', int length=0, char filler=' ');

@@ -615,11 +615,40 @@ void UTFT::print(const char *st, int x, int y, int deg)
 		x=((disp_y_size+1)-(stl*cfont.x_size))/2;
 	}
 
-	for (i=0; i<stl; i++)
+	for (i=0; i < stl; i++)
 		if (deg==0)
 			printChar(*st++, x + (i*(cfont.x_size)), y);
 		else
 			rotateChar(*st++, x, y, i, deg);
+}
+
+void UTFT::printWithMargin(const char *st, int x, int y, int limit)
+{
+	int stl, i;
+
+	stl = strlen(st);
+
+	if (orient==PORTRAIT)
+	{
+		if (x==RIGHT)
+		x=(disp_x_size+1)-(stl*cfont.x_size);
+		if (x==CENTER)
+		x=((disp_x_size+1)-(stl*cfont.x_size))/2;
+	}
+	else
+	{
+		if (x==RIGHT)
+		x=(disp_y_size+1)-(stl*cfont.x_size);
+		if (x==CENTER)
+		x=((disp_y_size+1)-(stl*cfont.x_size))/2;
+	}
+
+	uint8_t indx = y;
+	for (i=0; i < stl; i++) {
+		if(i != 0 && (i % limit) == 0) indx += 12;
+		
+		printChar(*st++, (x + ((i % limit)*(cfont.x_size))), indx);
+	}
 }
 
 
