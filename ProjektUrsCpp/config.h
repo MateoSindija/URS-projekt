@@ -26,17 +26,17 @@
 #define RS_PIN 6
 #define RS_PORT_DDR DDRC
 
-#define CS_PORT PORTB
-#define CS_PIN 3
-#define CS_PORT_DDR DDRB
+#define CS_PORT PORTC
+#define CS_PIN 1
+#define CS_PORT_DDR DDRC
 
 #define RD_PORT PORTC
 #define RD_PIN 4
 #define RD_PORT_DDR DDRC
 
-#define RESET_PORT PORTB
-#define RESET_PIN 2
-#define RESET_PORT_DDR DDRB
+#define RESET_PORT PORTC
+#define RESET_PIN 0
+#define RESET_PORT_DDR DDRC
 
 #define BACK_LIGHT_PORT PORTC
 #define BACK_LIGHT_PIN 1

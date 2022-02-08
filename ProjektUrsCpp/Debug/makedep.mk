@@ -14,8 +14,6 @@ fastio.S
 
 fastline.S
 
-had.c
-
 main.cpp
 
 ssd1289.c

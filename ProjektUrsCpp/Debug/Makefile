@@ -39,7 +39,6 @@ SUBDIRS :=
 C_SRCS +=  \
 ../color.c \
 ../DefaultFonts.c \
-../had.c \
 ../main.cpp \
 ../ssd1289.c \
 ../UTFT.cpp
@@ -62,7 +61,6 @@ fastbitmap.o \
 fastfill.o \
 fastio.o \
 fastline.o \
-had.o \
 main.o \
 ssd1289.o \
 UTFT.o
@@ -74,7 +72,6 @@ fastbitmap.o \
 fastfill.o \
 fastio.o \
 fastline.o \
-had.o \
 main.o \
 ssd1289.o \
 UTFT.o
@@ -86,7 +83,6 @@ fastbitmap.d \
 fastfill.d \
 fastio.d \
 fastline.d \
-had.d \
 main.d \
 ssd1289.d \
 UTFT.d
@@ -98,7 +94,6 @@ fastbitmap.d \
 fastfill.d \
 fastio.d \
 fastline.d \
-had.d \
 main.d \
 ssd1289.d \
 UTFT.d
@@ -125,13 +120,6 @@ LINKER_SCRIPT_DEP+=
 	
 
 ./DefaultFonts.o: .././DefaultFonts.c
-	@echo Building file: $<
-	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
-./had.o: .././had.c
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
 	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

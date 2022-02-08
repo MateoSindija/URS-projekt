@@ -246,9 +246,6 @@
     <Compile Include="fastline.S">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="had.c">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>

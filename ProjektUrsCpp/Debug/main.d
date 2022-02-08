@@ -12,15 +12,15 @@ main.d main.o: .././main.cpp \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
- d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h \
  .././UTFT.h .././config.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
- .././color.h .././had.c \
+ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h \
+ .././color.h .././DefaultFonts.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\pgmspace.h \
- .././DefaultFonts.h .././ssd1289.h .././fastio.h .././fastline.h \
- .././fastbitmap.h .././fastfill.h
+ .././ssd1289.h .././fastio.h .././fastline.h .././fastbitmap.h \
+ .././fastfill.h
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -48,8 +48,6 @@ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h:
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h:
 
-d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h:
-
 .././UTFT.h:
 
 .././config.h:
@@ -60,13 +58,13 @@ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
 
+d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h:
+
 .././color.h:
 
-.././had.c:
+.././DefaultFonts.h:
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\pgmspace.h:
-
-.././DefaultFonts.h:
 
 .././ssd1289.h:
 
