@@ -652,10 +652,10 @@ void UTFT::printWithMargin(const char *st, int x, int y, int limit)
 }
 
 
-void UTFT::printNumI(long num, int x, int y, int length, char filler)
+void UTFT::printNumI(uint8_t num, int x, int y, int length, char filler)
 {
-	char buf[25];
-	char st[27];
+	char buf[4];
+	char st[4];
 	bool neg=false;
 	int c=0, f=0;
   
@@ -676,12 +676,6 @@ void UTFT::printNumI(long num, int x, int y, int length, char filler)
 	}
 	else
 	{
-		if (num<0)
-		{
-			neg=true;
-			num=-num;
-		}
-	  
 		while (num>0)
 		{
 			buf[c]=48+(num % 10);
@@ -690,25 +684,20 @@ void UTFT::printNumI(long num, int x, int y, int length, char filler)
 		}
 		buf[c]=0;
 	  
-		if (neg)
+		if (length>c)
 		{
-			st[0]=45;
-		}
-	  
-		if (length>(c+neg))
-		{
-			for (int i=0; i<(length-c-neg); i++)
+			for (int i=0; i<(length-c); i++)
 			{
 				st[i+neg]=filler;
 				f++;
 			}
 		}
 
-		for (int i=0; i<c; i++)
+		for (int i=c-1; i>=0; i--)
 		{
-			st[i+neg+f]=buf[c-i-1];
+			st[i+f]=buf[c-i-1];
 		}
-		st[c+neg+f]=0;
+		st[c+f]=0;
 
 	}
 

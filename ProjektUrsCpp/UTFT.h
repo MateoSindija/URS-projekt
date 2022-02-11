@@ -139,7 +139,7 @@ class UTFT
 		void print(const char *st, int x, int y, int deg=0);
 		void printWithMargin(const char *st, int x, int y, int limit=39);
 		//void print(String st, int x, int y, int deg=0);
-		void printNumI(long num, int x, int y, int length=0, char filler=' ');
+		void printNumI(uint8_t num, int x, int y, int length=0, char filler=' ');
 		void printNumF(double num, byte dec, int x, int y, char divider='.', int length=0, char filler=' ');
 		void setFont(const uint8_t* font);
 		const uint8_t* getFont();

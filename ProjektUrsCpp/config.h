@@ -30,9 +30,9 @@
 #define CS_PIN 1
 #define CS_PORT_DDR DDRC
 
-#define RD_PORT PORTC
-#define RD_PIN 4
-#define RD_PORT_DDR DDRC
+#define RD_PORT PORTB
+#define RD_PIN 5
+#define RD_PORT_DDR DDRB
 
 #define RESET_PORT PORTC
 #define RESET_PIN 0
@@ -43,7 +43,7 @@
 #define BACK_LIGHT_DDR DDRC
 
 //#define F_CPU 12000000
-#define F_CPU 7372800
+#define F_CPU 7372800UL
 
 #define HAVE_STATUS_LED 0	
 #define STATUS_LED_PORT PORTB
