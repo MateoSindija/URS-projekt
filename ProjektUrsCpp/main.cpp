@@ -39,10 +39,39 @@
 #define D_OPTION_COORDINATE 200, 170, 10
 
 /*
+* Messages coordinate
+*/
+
+#define MILLIONARE 80, 110
+#define CORRECT 100, 110
+#define INCORRECT 110, 110
+#define SECURED 55, 110, 15
+#define MESSAGE_16K 110, 140, 15
+
+/*
 * Time to answer a question. Increase to increase question expiration time
 */
 
 #define EXPIRATION_TIME 20
+
+/*
+* Deboounce time
+*/
+#define DEBOUNCE 300
+
+/*
+* GUI lines
+*/
+
+#define TOP_HORIZONTAL_LINE 0, 70, 315, 70
+#define MIDDLE_VERTICAL_LINE 150, 70, 150, 210
+#define MIDDLE_HORIZONTAL_LINE 0, 150, 315, 150
+#define BOTTOM_HORIZONTAL_LINE 0, 210, 315, 210
+
+/*
+* Right arrow coordinates
+*/
+#define RIGHT_ARROW 280, 222
 
 /*
 * Global variables
@@ -109,16 +138,16 @@ void displayCorrect() {
 	display.fillScr(BLUE);
 	display.setBackColor(BLUE);
 	if (step == 5) {
-		display.printWithMargin("OSIGURALI STE", 55, 110, 15);
-		display.printWithMargin("16k KN", 110, 140, 15);
+		display.printWithMargin("OSIGURALI STE", SECURED);
+		display.printWithMargin("16k KN", MESSAGE_16K);
 		_delay_ms(2000);
 		} else if (step == 10) {
-		display.print("MILIJUNAS", 80, 110);
+		display.print("MILIJUNAS", MILLIONARE);
 		step = 0;
 		_delay_ms(10000);
 		} else if (step == 0) {
-		display.print("NETOCNO", 100, 110);
-	} else display.print("TOCNO", 110, 110);
+		display.print("NETOCNO", CORRECT);
+	} else display.print("TOCNO", INCORRECT);
 	display.setFont(SmallFont);
 	_delay_ms(1000);
 	display.clrScr();
@@ -142,10 +171,10 @@ void drawScoreHighlight() {
 */
 
 void displayGUI(uint8_t jokerFifty = 0) {
-	display.drawLine(0, 70, 315, 70); // Top horizontal line
-	display.drawLine(150, 70, 150, 210); // Middle vertical line
-	display.drawLine(0, 150, 315, 150); // Middle horizontal line line
-	display.drawLine(0, 210, 315, 210); // Bottom horizontal line
+	display.drawLine(TOP_HORIZONTAL_LINE); // Top horizontal line
+	display.drawLine(MIDDLE_VERTICAL_LINE); // Middle vertical line
+	display.drawLine(MIDDLE_HORIZONTAL_LINE); // Middle horizontal line line
+	display.drawLine(BOTTOM_HORIZONTAL_LINE); // Bottom horizontal line
 
 	display.setColor(YELLOW);
 	display.setFont(BigFont);
@@ -214,7 +243,7 @@ void displayScore() {
 	if (step < 5) {
 		for (uint8_t i = 0; i < 5; i++) {
 			display.print(score[i], 10 + (i * 50), 221);
-			display.print("->", 280, 225);
+			display.print("->", RIGHT_ARROW);
 		}
 		} else if (step >= 5 && step < 10) {
 		for (uint8_t i = 5; i < 10; i++) {
@@ -312,19 +341,19 @@ int main() {
 		//CHECK ANSWER
 		if (bit_is_clear(PINB, 0)) {
 			ans = 1;
-			_delay_ms(300);
+			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
 			} else if (bit_is_clear(PINB, 1)) {
 			ans = 2;
-			_delay_ms(300);
+			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
 			} else if (bit_is_clear(PINB, 2)) {
 			ans = 3;
-			_delay_ms(300);
+			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
 			} else if (bit_is_clear(PINB, 3)) {
 			ans = 4;
-			_delay_ms(300);
+			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
 			} else if (bit_is_clear(PINB, 4) && !jokerFiftyUsed) {
 

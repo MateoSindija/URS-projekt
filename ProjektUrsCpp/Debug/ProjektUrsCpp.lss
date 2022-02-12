@@ -15,19 +15,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   5 .debug_aranges 00000290  00000000  00000000  00003fc8  2**3
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00006865  00000000  00000000  00004258  2**0
+  6 .debug_info   00006869  00000000  00000000  00004258  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000d0a  00000000  00000000  0000aabd  2**0
+  7 .debug_abbrev 00000d34  00000000  00000000  0000aac1  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00001f7f  00000000  00000000  0000b7c7  2**0
+  8 .debug_line   00001f7a  00000000  00000000  0000b7f5  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000a44  00000000  00000000  0000d748  2**2
+  9 .debug_frame  00000a44  00000000  00000000  0000d770  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000dff  00000000  00000000  0000e18c  2**0
+ 10 .debug_str    00000dff  00000000  00000000  0000e1b4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00004299  00000000  00000000  0000ef8b  2**0
+ 11 .debug_loc    00004299  00000000  00000000  0000efb3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000001f8  00000000  00000000  00013224  2**0
+ 12 .debug_ranges 000001f8  00000000  00000000  0001324c  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -1590,7 +1590,7 @@ FAST_LINE_B SUB16 SUB16
     1786:	7f 4f       	sbci	r23, 0xFF	; 255
     1788:	09 f0       	breq	.+2      	; 0x178c <_Z41__static_initialization_and_destruction_0ii+0xe>
     178a:	0b c1       	rjmp	.+534    	; 0x19a2 <_Z41__static_initialization_and_destruction_0ii+0x224>
-#define EXPIRATION_TIME 20
+#define RIGHT_ARROW 280, 222
 
 /*
 * Global variables
@@ -1860,7 +1860,7 @@ void displayCorrect() {
     19d8:	80 91 ad 03 	lds	r24, 0x03AD	; 0x8003ad <step>
     19dc:	85 30       	cpi	r24, 0x05	; 5
     19de:	01 f5       	brne	.+64     	; 0x1a20 <_Z14displayCorrectv+0x7c>
-		display.printWithMargin("OSIGURALI STE", 55, 110, 15);
+		display.printWithMargin("OSIGURALI STE", SECURED);
     19e0:	0f e0       	ldi	r16, 0x0F	; 15
     19e2:	10 e0       	ldi	r17, 0x00	; 0
     19e4:	2e e6       	ldi	r18, 0x6E	; 110
@@ -1872,7 +1872,7 @@ void displayCorrect() {
     19f0:	8e ea       	ldi	r24, 0xAE	; 174
     19f2:	93 e0       	ldi	r25, 0x03	; 3
     19f4:	0e 94 d9 19 	call	0x33b2	; 0x33b2 <_ZN4UTFT15printWithMarginEPKciii>
-		display.printWithMargin("16k KN", 110, 140, 15);
+		display.printWithMargin("16k KN", MESSAGE_16K);
     19f8:	2c e8       	ldi	r18, 0x8C	; 140
     19fa:	30 e0       	ldi	r19, 0x00	; 0
     19fc:	4e e6       	ldi	r20, 0x6E	; 110
@@ -1902,7 +1902,7 @@ void displayCorrect() {
 		} else if (step == 10) {
     1a20:	8a 30       	cpi	r24, 0x0A	; 10
     1a22:	c1 f4       	brne	.+48     	; 0x1a54 <_Z14displayCorrectv+0xb0>
-		display.print("MILIJUNAS", 80, 110);
+		display.print("MILIJUNAS", MILLIONARE);
     1a24:	00 e0       	ldi	r16, 0x00	; 0
     1a26:	10 e0       	ldi	r17, 0x00	; 0
     1a28:	2e e6       	ldi	r18, 0x6E	; 110
@@ -1930,7 +1930,7 @@ void displayCorrect() {
 		} else if (step == 0) {
     1a54:	81 11       	cpse	r24, r1
     1a56:	0d c0       	rjmp	.+26     	; 0x1a72 <_Z14displayCorrectv+0xce>
-		display.print("NETOCNO", 100, 110);
+		display.print("NETOCNO", CORRECT);
     1a58:	00 e0       	ldi	r16, 0x00	; 0
     1a5a:	10 e0       	ldi	r17, 0x00	; 0
     1a5c:	2e e6       	ldi	r18, 0x6E	; 110
@@ -1943,7 +1943,7 @@ void displayCorrect() {
     1a6a:	93 e0       	ldi	r25, 0x03	; 3
     1a6c:	0e 94 fe 18 	call	0x31fc	; 0x31fc <_ZN4UTFT5printEPKciii>
     1a70:	0c c0       	rjmp	.+24     	; 0x1a8a <_Z14displayCorrectv+0xe6>
-	} else display.print("TOCNO", 110, 110);
+	} else display.print("TOCNO", INCORRECT);
     1a72:	00 e0       	ldi	r16, 0x00	; 0
     1a74:	10 e0       	ldi	r17, 0x00	; 0
     1a76:	2e e6       	ldi	r18, 0x6E	; 110
@@ -2080,7 +2080,7 @@ void displayGUI(uint8_t jokerFifty = 0) {
     1b5a:	1f 93       	push	r17
     1b5c:	cf 93       	push	r28
     1b5e:	c8 2f       	mov	r28, r24
-	display.drawLine(0, 70, 315, 70); // Top horizontal line
+	display.drawLine(TOP_HORIZONTAL_LINE); // Top horizontal line
     1b60:	06 e4       	ldi	r16, 0x46	; 70
     1b62:	10 e0       	ldi	r17, 0x00	; 0
     1b64:	2b e3       	ldi	r18, 0x3B	; 59
@@ -2092,7 +2092,7 @@ void displayGUI(uint8_t jokerFifty = 0) {
     1b70:	8e ea       	ldi	r24, 0xAE	; 174
     1b72:	93 e0       	ldi	r25, 0x03	; 3
     1b74:	0e 94 23 15 	call	0x2a46	; 0x2a46 <_ZN4UTFT8drawLineEiiii>
-	display.drawLine(150, 70, 150, 210); // Middle vertical line
+	display.drawLine(MIDDLE_VERTICAL_LINE); // Middle vertical line
     1b78:	02 ed       	ldi	r16, 0xD2	; 210
     1b7a:	10 e0       	ldi	r17, 0x00	; 0
     1b7c:	26 e9       	ldi	r18, 0x96	; 150
@@ -2104,7 +2104,7 @@ void displayGUI(uint8_t jokerFifty = 0) {
     1b88:	8e ea       	ldi	r24, 0xAE	; 174
     1b8a:	93 e0       	ldi	r25, 0x03	; 3
     1b8c:	0e 94 23 15 	call	0x2a46	; 0x2a46 <_ZN4UTFT8drawLineEiiii>
-	display.drawLine(0, 150, 315, 150); // Middle horizontal line line
+	display.drawLine(MIDDLE_HORIZONTAL_LINE); // Middle horizontal line line
     1b90:	06 e9       	ldi	r16, 0x96	; 150
     1b92:	10 e0       	ldi	r17, 0x00	; 0
     1b94:	2b e3       	ldi	r18, 0x3B	; 59
@@ -2116,7 +2116,7 @@ void displayGUI(uint8_t jokerFifty = 0) {
     1ba0:	8e ea       	ldi	r24, 0xAE	; 174
     1ba2:	93 e0       	ldi	r25, 0x03	; 3
     1ba4:	0e 94 23 15 	call	0x2a46	; 0x2a46 <_ZN4UTFT8drawLineEiiii>
-	display.drawLine(0, 210, 315, 210); // Bottom horizontal line
+	display.drawLine(BOTTOM_HORIZONTAL_LINE); // Bottom horizontal line
     1ba8:	02 ed       	ldi	r16, 0xD2	; 210
     1baa:	10 e0       	ldi	r17, 0x00	; 0
     1bac:	2b e3       	ldi	r18, 0x3B	; 59
@@ -2590,8 +2590,8 @@ void displayScore() {
     1f06:	8e ea       	ldi	r24, 0xAE	; 174
     1f08:	93 e0       	ldi	r25, 0x03	; 3
     1f0a:	0e 94 fe 18 	call	0x31fc	; 0x31fc <_ZN4UTFT5printEPKciii>
-			display.print("->", 280, 225);
-    1f0e:	21 ee       	ldi	r18, 0xE1	; 225
+			display.print("->", RIGHT_ARROW);
+    1f0e:	2e ed       	ldi	r18, 0xDE	; 222
     1f10:	30 e0       	ldi	r19, 0x00	; 0
     1f12:	48 e1       	ldi	r20, 0x18	; 24
     1f14:	51 e0       	ldi	r21, 0x01	; 1
@@ -2609,7 +2609,7 @@ void displayScore() {
     1f22:	cf 5f       	subi	r28, 0xFF	; 255
     1f24:	d6 cf       	rjmp	.-84     	; 0x1ed2 <_Z12displayScorev+0x10>
 			display.print(score[i], 10 + (i * 50), 221);
-			display.print("->", 280, 225);
+			display.print("->", RIGHT_ARROW);
 		}
 		} else if (step >= 5 && step < 10) {
     1f26:	85 50       	subi	r24, 0x05	; 5
@@ -2651,7 +2651,7 @@ void displayScore() {
     1f6a:	0e 94 fe 18 	call	0x31fc	; 0x31fc <_ZN4UTFT5printEPKciii>
 		for (uint8_t i = 0; i < 5; i++) {
 			display.print(score[i], 10 + (i * 50), 221);
-			display.print("->", 280, 225);
+			display.print("->", RIGHT_ARROW);
 		}
 		} else if (step >= 5 && step < 10) {
 		for (uint8_t i = 5; i < 10; i++) {
@@ -3061,7 +3061,7 @@ int main() {
     2208:	e1 f7       	brne	.-8      	; 0x2202 <main+0x13c>
     220a:	00 c0       	rjmp	.+0      	; 0x220c <main+0x146>
     220c:	00 00       	nop
-			_delay_ms(300);
+			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
     220e:	e0 91 ad 03 	lds	r30, 0x03AD	; 0x8003ad <step>
     2212:	9b e0       	ldi	r25, 0x0B	; 11
@@ -3102,7 +3102,7 @@ int main() {
     2256:	e1 f7       	brne	.-8      	; 0x2250 <main+0x18a>
     2258:	00 c0       	rjmp	.+0      	; 0x225a <main+0x194>
     225a:	00 00       	nop
-			_delay_ms(300);
+			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
     225c:	e0 91 ad 03 	lds	r30, 0x03AD	; 0x8003ad <step>
     2260:	9b e0       	ldi	r25, 0x0B	; 11
@@ -3143,7 +3143,7 @@ int main() {
     22a4:	e1 f7       	brne	.-8      	; 0x229e <main+0x1d8>
     22a6:	00 c0       	rjmp	.+0      	; 0x22a8 <main+0x1e2>
     22a8:	00 00       	nop
-			_delay_ms(300);
+			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
     22aa:	e0 91 ad 03 	lds	r30, 0x03AD	; 0x8003ad <step>
     22ae:	9b e0       	ldi	r25, 0x0B	; 11
@@ -3184,7 +3184,7 @@ int main() {
     22f2:	e1 f7       	brne	.-8      	; 0x22ec <main+0x226>
     22f4:	00 c0       	rjmp	.+0      	; 0x22f6 <main+0x230>
     22f6:	00 00       	nop
-			_delay_ms(300);
+			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
     22f8:	e0 91 ad 03 	lds	r30, 0x03AD	; 0x8003ad <step>
     22fc:	9b e0       	ldi	r25, 0x0B	; 11
