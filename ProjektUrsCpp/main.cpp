@@ -12,15 +12,49 @@
 
 #include "ssd1289.h"
 
+/*
+* RGB colors
+*/
+
 #define BLUE 0, 0, 204
 #define YELLOW 246, 255, 0
 #define WHITE 255, 255, 255
 
-UTFT display;
-uint8_t step = 0;
-uint8_t tSS = 0;
-uint8_t tS = 20;
+/*
+* Coordinates for option letters
+*/
 
+#define A_COORDINATE 10, 100
+#define B_COORDINATE 160, 100
+#define C_COORDINATE 10, 170
+#define D_COORDINATE 160, 170
+
+/*
+* Coordinates for displaying options (answers)
+*/
+
+#define A_OPTION_COORDINATE 50, 100, 10
+#define B_OPTION_COORDINATE 200, 100, 10
+#define C_OPTION_COORDINATE 50, 170, 10
+#define D_OPTION_COORDINATE 200, 170, 10
+
+/*
+* Time to answer a question. Increase to increase question expiration time
+*/
+
+#define EXPIRATION_TIME 20
+
+/*
+* Global variables
+*/
+UTFT display; //Display class
+uint8_t step = 0; //Current answer streak
+uint8_t tSS = 0; //Time
+uint8_t tS = EXPIRATION_TIME;
+
+/*
+* Question object and constructor
+*/
 struct objectQuestion {
 	char * question;
 	char * a;
@@ -30,8 +64,11 @@ struct objectQuestion {
 	uint8_t correctAns;
 
 	objectQuestion(char * question, char * a, char * b, char * c, char * d, uint8_t correctAns): question(question), a(a), b(b), c(c), d(d), correctAns(correctAns) {}
-
 };
+
+/*
+* All questions in game
+*/
 
 const objectQuestion questionsEasy[10] = {
 	objectQuestion("Najveci planet suncevog sustava je", "Saturn", "Pluton", "Venera", "Jupiter", 4),
@@ -46,6 +83,9 @@ const objectQuestion questionsEasy[10] = {
 	objectQuestion("Beirut je glavni grad", "Lebanon", "Bahrain", "Kuwait", "Sirija", 1),
 };
 
+/*
+* Scores
+*/
 const char score[10][6] = {
 	"100",
 	"500",
@@ -59,6 +99,10 @@ const char score[10][6] = {
 	"1000k"
 };
 
+/*
+* Displays text on whole screen when the subject answers the question
+*/
+
 void displayCorrect() {
 	display.clrScr();
 	display.setFont(BigFont);
@@ -71,7 +115,7 @@ void displayCorrect() {
 		} else if (step == 10) {
 		display.print("MILIJUNAS", 80, 110);
 		step = 0;
-		_delay_ms(2000);
+		_delay_ms(10000);
 		} else if (step == 0) {
 		display.print("NETOCNO", 100, 110);
 	} else display.print("TOCNO", 110, 110);
@@ -79,6 +123,10 @@ void displayCorrect() {
 	_delay_ms(1000);
 	display.clrScr();
 }
+
+/*
+* Displays highlighter around the score depending on the question
+*/
 
 void drawScoreHighlight() {
 
@@ -88,64 +136,78 @@ void drawScoreHighlight() {
 	display.setColor(BLUE);
 }
 
+/*
+* Displays GUI elements
+* Also used for displaying 50/50
+*/
+
 void displayGUI(uint8_t jokerFifty = 0) {
-	display.drawLine(0, 70, 315, 70); //gornja horizontalna linija
-	display.drawLine(150, 70, 150, 210); //srednja okomita linija
-	display.drawLine(0, 150, 315, 150); //srednja horizontalna linija
-	display.drawLine(0, 210, 315, 210); //donja horrizontalna linija
+	display.drawLine(0, 70, 315, 70); // Top horizontal line
+	display.drawLine(150, 70, 150, 210); // Middle vertical line
+	display.drawLine(0, 150, 315, 150); // Middle horizontal line line
+	display.drawLine(0, 210, 315, 210); // Bottom horizontal line
 
 	display.setColor(YELLOW);
 	display.setFont(BigFont);
 	if (jokerFifty) {
 		if (1 == questionsEasy[step].correctAns) {
-			display.print("A:", 10, 100);
-			display.print("D:", 160, 170);
+			display.print("A:", A_COORDINATE);
+			display.print("D:", D_COORDINATE);
 			} else if (2 == questionsEasy[step].correctAns) {
-			display.print("C:", 10, 100);
-			display.print("D:", 160, 170);
+			display.print("C:", C_COORDINATE);
+			display.print("D:", D_COORDINATE);
 			} else if (3 == questionsEasy[step].correctAns) {
-			display.print("B:", 160, 100);
-			display.print("A:", 10, 100);
+			display.print("B:", B_COORDINATE);
+			display.print("A:", A_COORDINATE);
 			} else {
-			display.print("B:", 160, 100);
-			display.print("D:", 160, 170);
+			display.print("B:", B_COORDINATE);
+			display.print("D:", D_COORDINATE);
 		}
 		} else {
-		display.print("A:", 10, 100);
-		display.print("B:", 160, 100);
-		display.print("C:", 10, 170);
-		display.print("D:", 160, 170);
+		display.print("A:", A_COORDINATE);
+		display.print("B:", B_COORDINATE);
+		display.print("C:", C_COORDINATE);
+		display.print("D:", D_COORDINATE);
 	}
 
 	display.setColor(WHITE);
 	display.setFont(SmallFont);
 }
 
+/*
+* Displays question and option text
+* Also used for displaying 50/50
+*/
+
 void displayQuestion(objectQuestion questionObj, uint8_t * jokerFiftyUsed = 0, uint8_t jokerFifty = 0) {
 	display.printWithMargin(questionObj.question, 2, 0);
 	if (jokerFifty) {
 		( * jokerFiftyUsed) = 1;
 		if (1 == questionObj.correctAns) {
-			display.printWithMargin(questionObj.a, 50, 100, 10);
-			display.printWithMargin(questionObj.d, 200, 170, 10);
+			display.printWithMargin(questionObj.a, A_OPTION_COORDINATE);
+			display.printWithMargin(questionObj.d, D_OPTION_COORDINATE);
 			} else if (2 == questionObj.correctAns) {
-			display.printWithMargin(questionObj.b, 200, 100, 10);
-			display.printWithMargin(questionObj.c, 200, 170, 10);
+			display.printWithMargin(questionObj.b, B_OPTION_COORDINATE);
+			display.printWithMargin(questionObj.c, C_OPTION_COORDINATE);
 			} else if (3 == questionObj.correctAns) {
-			display.printWithMargin(questionObj.c, 50, 170, 10);
-			display.printWithMargin(questionObj.a, 50, 100, 10);
+			display.printWithMargin(questionObj.c, C_OPTION_COORDINATE);
+			display.printWithMargin(questionObj.a, A_OPTION_COORDINATE);
 			} else {
-			display.printWithMargin(questionObj.b, 200, 100, 10);
-			display.printWithMargin(questionObj.d, 200, 170, 10);
+			display.printWithMargin(questionObj.b, B_OPTION_COORDINATE);
+			display.printWithMargin(questionObj.d, D_OPTION_COORDINATE);
 
 		}
 		} else {
-		display.printWithMargin(questionObj.a, 50, 100, 10);
-		display.printWithMargin(questionObj.b, 200, 100, 10);
-		display.printWithMargin(questionObj.c, 50, 170, 10);
-		display.printWithMargin(questionObj.d, 200, 170, 10);
+		display.printWithMargin(questionObj.a, A_OPTION_COORDINATE);
+		display.printWithMargin(questionObj.b, B_OPTION_COORDINATE);
+		display.printWithMargin(questionObj.c, C_OPTION_COORDINATE);
+		display.printWithMargin(questionObj.d, D_OPTION_COORDINATE);
 	}
 }
+
+/*
+* Displays bottom score bar
+*/
 
 void displayScore() {
 
@@ -161,6 +223,11 @@ void displayScore() {
 	}
 }
 
+/*
+* Used for checking if the selected answer was correct,
+* Resets time and displays the right title screen
+*/
+
 void checkAnswer(uint8_t * ans, objectQuestion questionsObj, uint8_t * jokerFiftyUsed) {
 
 	if (( * ans) == questionsObj.correctAns) {
@@ -171,7 +238,7 @@ void checkAnswer(uint8_t * ans, objectQuestion questionsObj, uint8_t * jokerFift
 		displayQuestion(questionsEasy[step]);
 		drawScoreHighlight();
 		* ans = 0;
-		tS = 20;
+		tS = EXPIRATION_TIME;
 		} else {
 		* jokerFiftyUsed = 0;
 		step = 0;
@@ -181,18 +248,22 @@ void checkAnswer(uint8_t * ans, objectQuestion questionsObj, uint8_t * jokerFift
 		displayQuestion(questionsEasy[step]);
 		drawScoreHighlight();
 		* ans = 0;
-		tS = 20;
+		tS = EXPIRATION_TIME;
 	};
 }
+
+/*
+* Timer0 used to limit answer time
+*/
 
 ISR(TIMER0_COMP_vect) {
 	tSS++;
 
-	if (tSS >= 20) {
+	if (tSS >= EXPIRATION_TIME) {
 		tSS = 0;
 		tS--;
 
-		if (tS == 0) tS = 20;
+		if (tS < 0 ) tS = EXPIRATION_TIME;
 	}
 
 }
@@ -203,7 +274,6 @@ int main() {
 	DDRB = 0x00;
 
 	//VARIABLES
-
 	uint8_t ans = 0;
 	uint8_t jokerFiftyUsed = 0;
 
@@ -218,24 +288,28 @@ int main() {
 	displayQuestion(questionsEasy[step]);
 	drawScoreHighlight();
 
+	//TIMER0 INIT
 	TCCR0 = _BV(WGM01) | _BV(CS02) | _BV(CS00);
-	OCR0 = 240;
+	OCR0 = 255;
 	TIMSK = _BV(OCIE0);
 	sei();
-
+	
+	//MAIN WHILE
 	while (1) {
 		displayGUI();
 		displayScore();
-
+		
+		//WAIT FOR ANSWER OR TIMER EXPIRES
 		while (!bit_is_clear(PINB, 0) && !bit_is_clear(PINB, 1) && !bit_is_clear(PINB, 2) && !bit_is_clear(PINB, 3) && !bit_is_clear(PINB, 4)) {
 			display.printNumI(tS, 140, 45, 3);
-			if (tS <= 1) {
+			if (tS <= 0) {
 				ans = 5;
 				checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
 				break;
 			}
 			displayGUI();
-		};
+		}
+		//CHECK ANSWER
 		if (bit_is_clear(PINB, 0)) {
 			ans = 1;
 			_delay_ms(300);
@@ -260,8 +334,5 @@ int main() {
 			displayGUI(1);
 			displayQuestion(questionsEasy[step], & jokerFiftyUsed, 1);
 		}
-
-		display.setFont(BigFont);
-
 	}
 }
