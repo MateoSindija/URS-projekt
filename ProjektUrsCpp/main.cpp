@@ -4,13 +4,13 @@
 
 #include <stdlib.h>
 
-#include "UTFT.h"
+#include "UTFT/UTFT.h"
 
-#include "color.h"
+#include "UTFT/color.h"
 
-#include "DefaultFonts.h"
+#include "UTFT/DefaultFonts.h"
 
-#include "ssd1289.h"
+#include "UTFT/ssd1289.h"
 
 /*
 * RGB colors

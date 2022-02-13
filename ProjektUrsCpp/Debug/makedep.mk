@@ -2,21 +2,21 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-color.c
-
-DefaultFonts.c
-
-fastbitmap.S
-
-fastfill.S
-
-fastio.S
-
-fastline.S
-
 main.cpp
 
-ssd1289.c
+UTFT\color.c
 
-UTFT.cpp
+UTFT\DefaultFonts.c
+
+UTFT\fastbitmap.S
+
+UTFT\fastfill.S
+
+UTFT\fastio.S
+
+UTFT\fastline.S
+
+UTFT\ssd1289.c
+
+UTFT\UTFT.cpp
 

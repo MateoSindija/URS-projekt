@@ -32,71 +32,72 @@ LIB_DEP:=
 LINKER_SCRIPT_DEP:=
 
 # Every subdirectory with source files must be described here
-SUBDIRS := 
+SUBDIRS :=  \
+../UTFT
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../color.c \
-../DefaultFonts.c \
 ../main.cpp \
-../ssd1289.c \
-../UTFT.cpp
+../UTFT/color.c \
+../UTFT/DefaultFonts.c \
+../UTFT/ssd1289.c \
+../UTFT/UTFT.cpp
 
 
 PREPROCESSING_SRCS +=  \
-../fastbitmap.S \
-../fastfill.S \
-../fastio.S \
-../fastline.S
+../UTFT/fastbitmap.S \
+../UTFT/fastfill.S \
+../UTFT/fastio.S \
+../UTFT/fastline.S
 
 
 ASM_SRCS += 
 
 
 OBJS +=  \
-color.o \
-DefaultFonts.o \
-fastbitmap.o \
-fastfill.o \
-fastio.o \
-fastline.o \
 main.o \
-ssd1289.o \
-UTFT.o
+UTFT/color.o \
+UTFT/DefaultFonts.o \
+UTFT/fastbitmap.o \
+UTFT/fastfill.o \
+UTFT/fastio.o \
+UTFT/fastline.o \
+UTFT/ssd1289.o \
+UTFT/UTFT.o
 
 OBJS_AS_ARGS +=  \
-color.o \
-DefaultFonts.o \
-fastbitmap.o \
-fastfill.o \
-fastio.o \
-fastline.o \
 main.o \
-ssd1289.o \
-UTFT.o
+UTFT/color.o \
+UTFT/DefaultFonts.o \
+UTFT/fastbitmap.o \
+UTFT/fastfill.o \
+UTFT/fastio.o \
+UTFT/fastline.o \
+UTFT/ssd1289.o \
+UTFT/UTFT.o
 
 C_DEPS +=  \
-color.d \
-DefaultFonts.d \
-fastbitmap.d \
-fastfill.d \
-fastio.d \
-fastline.d \
 main.d \
-ssd1289.d \
-UTFT.d
+UTFT/color.d \
+UTFT/DefaultFonts.d \
+UTFT/fastbitmap.d \
+UTFT/fastfill.d \
+UTFT/fastio.d \
+UTFT/fastline.d \
+UTFT/ssd1289.d \
+UTFT/UTFT.d
 
 C_DEPS_AS_ARGS +=  \
-color.d \
-DefaultFonts.d \
-fastbitmap.d \
-fastfill.d \
-fastio.d \
-fastline.d \
 main.d \
-ssd1289.d \
-UTFT.d
+UTFT/color.d \
+UTFT/DefaultFonts.d \
+UTFT/fastbitmap.d \
+UTFT/fastfill.d \
+UTFT/fastio.d \
+UTFT/fastline.d \
+UTFT/ssd1289.d \
+UTFT/UTFT.d
 
 OUTPUT_FILE_PATH +=ProjektUrsCpp.elf
 
@@ -112,20 +113,6 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-./color.o: .././color.c
-	@echo Building file: $<
-	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
-./DefaultFonts.o: .././DefaultFonts.c
-	@echo Building file: $<
-	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
 ./main.o: .././main.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
@@ -133,14 +120,28 @@ LINKER_SCRIPT_DEP+=
 	@echo Finished building: $<
 	
 
-./ssd1289.o: .././ssd1289.c
+UTFT/color.o: ../UTFT/color.c
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
 	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
-./UTFT.o: .././UTFT.cpp
+UTFT/DefaultFonts.o: ../UTFT/DefaultFonts.c
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+UTFT/ssd1289.o: ../UTFT/ssd1289.c
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+UTFT/UTFT.o: ../UTFT/UTFT.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
 	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -c -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
@@ -155,28 +156,28 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU Assembler
-./fastbitmap.o: .././fastbitmap.S
+UTFT/fastbitmap.o: ../UTFT/fastbitmap.S
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU Assembler : 5.4.0
 	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -Wa,-gdwarf2 -x assembler-with-cpp -c -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -I "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -Wa,-g   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
-./fastfill.o: .././fastfill.S
+UTFT/fastfill.o: ../UTFT/fastfill.S
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU Assembler : 5.4.0
 	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -Wa,-gdwarf2 -x assembler-with-cpp -c -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -I "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -Wa,-g   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
-./fastio.o: .././fastio.S
+UTFT/fastio.o: ../UTFT/fastio.S
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU Assembler : 5.4.0
 	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -Wa,-gdwarf2 -x assembler-with-cpp -c -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -I "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -Wa,-g   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
-./fastline.o: .././fastline.S
+UTFT/fastline.o: ../UTFT/fastline.S
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU Assembler : 5.4.0
 	$(QUOTE)D:\Atmega Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -Wa,-gdwarf2 -x assembler-with-cpp -c -mmcu=atmega16a -B "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega16a" -I "D:\Atmega Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -Wa,-g   -o "$@" "$<" 

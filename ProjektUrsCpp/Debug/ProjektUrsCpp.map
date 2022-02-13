@@ -1,19 +1,19 @@
 Archive member included to satisfy reference by file (symbol)
 
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
-                              UTFT.o (__subsf3)
+                              UTFT/UTFT.o (__subsf3)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
                               d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o) (__addsf3x)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
-                              UTFT.o (__eqsf2)
+                              UTFT/UTFT.o (__eqsf2)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cos.o)
-                              UTFT.o (cos)
+                              UTFT/UTFT.o (cos)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
-                              UTFT.o (__fixsfsi)
+                              UTFT/UTFT.o (__fixsfsi)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
                               d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o) (__fixunssfsi)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
-                              UTFT.o (__floatsisf)
+                              UTFT/UTFT.o (__floatsisf)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
                               d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o) (__fp_cmp)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
@@ -35,13 +35,13 @@ d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
                               d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_zero)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
-                              UTFT.o (__gtsf2)
+                              UTFT/UTFT.o (__gtsf2)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                              UTFT.o (__mulsf3)
+                              UTFT/UTFT.o (__mulsf3)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
                               d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__mulsf3x)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(sin.o)
-                              UTFT.o (sin)
+                              UTFT/UTFT.o (sin)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
                               d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_rempio2.o) (__fp_mpack_finite)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powsodd.o)
@@ -49,11 +49,11 @@ d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
                               d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powsodd.o) (__fp_powser)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
-                              color.o (__mulsi3)
+                              UTFT/color.o (__mulsi3)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
-                              UTFT.o (__divmodhi4)
+                              UTFT/UTFT.o (__divmodhi4)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
-                              color.o (__udivmodsi4)
+                              UTFT/color.o (__udivmodsi4)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
                               D:/Atmega Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega16a/avr5/crtatmega16a.o (exit)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
@@ -63,9 +63,9 @@ d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_ctors.o)
                               main.o (__do_global_ctors)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
-                              color.o (__muluhisi3)
+                              UTFT/color.o (__muluhisi3)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulshisi3.o)
-                              color.o (__mulshisi3)
+                              UTFT/color.o (__mulshisi3)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
                               d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o) (__udivmodhi4)
 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
@@ -77,93 +77,93 @@ Discarded input sections
 
  .data          0x00000000        0x0 D:/Atmega Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega16a/avr5/crtatmega16a.o
  .bss           0x00000000        0x0 D:/Atmega Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega16a/avr5/crtatmega16a.o
- .text          0x00000000        0x0 color.o
- .data          0x00000000        0x0 color.o
- .bss           0x00000000        0x0 color.o
- .text.rgba2hsva
-                0x00000000      0x268 color.o
- .text.hsva2rgba
-                0x00000000      0x2d0 color.o
- .debug_info    0x00000000      0x31e color.o
- .debug_abbrev  0x00000000       0xf7 color.o
- .debug_loc     0x00000000      0x4d6 color.o
- .debug_aranges
-                0x00000000       0x28 color.o
- .debug_ranges  0x00000000       0x18 color.o
- .debug_line    0x00000000      0x213 color.o
- .debug_str     0x00000000      0x1dc color.o
- .comment       0x00000000       0x31 color.o
- .debug_frame   0x00000000       0xf0 color.o
- .text          0x00000000        0x0 DefaultFonts.o
- .data          0x00000000        0x0 DefaultFonts.o
- .bss           0x00000000        0x0 DefaultFonts.o
- .progmem.data.SevenSegNumFont
-                0x00000000      0x7d4 DefaultFonts.o
- .data          0x00000000        0x0 fastbitmap.o
- .bss           0x00000000        0x0 fastbitmap.o
- .data          0x00000000        0x0 fastfill.o
- .bss           0x00000000        0x0 fastfill.o
- .data          0x00000000        0x0 fastio.o
- .bss           0x00000000        0x0 fastio.o
- .data          0x00000000        0x0 fastline.o
- .bss           0x00000000        0x0 fastline.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
- .text          0x00000000        0x0 ssd1289.o
- .data          0x00000000        0x0 ssd1289.o
- .bss           0x00000000        0x0 ssd1289.o
- .text          0x00000000        0x0 UTFT.o
- .data          0x00000000        0x0 UTFT.o
- .bss           0x00000000        0x0 UTFT.o
+ .text          0x00000000        0x0 UTFT/color.o
+ .data          0x00000000        0x0 UTFT/color.o
+ .bss           0x00000000        0x0 UTFT/color.o
+ .text.rgba2hsva
+                0x00000000      0x268 UTFT/color.o
+ .text.hsva2rgba
+                0x00000000      0x2d0 UTFT/color.o
+ .debug_info    0x00000000      0x31e UTFT/color.o
+ .debug_abbrev  0x00000000       0xf7 UTFT/color.o
+ .debug_loc     0x00000000      0x4d6 UTFT/color.o
+ .debug_aranges
+                0x00000000       0x28 UTFT/color.o
+ .debug_ranges  0x00000000       0x18 UTFT/color.o
+ .debug_line    0x00000000      0x216 UTFT/color.o
+ .debug_str     0x00000000      0x1df UTFT/color.o
+ .comment       0x00000000       0x31 UTFT/color.o
+ .debug_frame   0x00000000       0xf0 UTFT/color.o
+ .text          0x00000000        0x0 UTFT/DefaultFonts.o
+ .data          0x00000000        0x0 UTFT/DefaultFonts.o
+ .bss           0x00000000        0x0 UTFT/DefaultFonts.o
+ .progmem.data.SevenSegNumFont
+                0x00000000      0x7d4 UTFT/DefaultFonts.o
+ .data          0x00000000        0x0 UTFT/fastbitmap.o
+ .bss           0x00000000        0x0 UTFT/fastbitmap.o
+ .data          0x00000000        0x0 UTFT/fastfill.o
+ .bss           0x00000000        0x0 UTFT/fastfill.o
+ .data          0x00000000        0x0 UTFT/fastio.o
+ .bss           0x00000000        0x0 UTFT/fastio.o
+ .data          0x00000000        0x0 UTFT/fastline.o
+ .bss           0x00000000        0x0 UTFT/fastline.o
+ .text          0x00000000        0x0 UTFT/ssd1289.o
+ .data          0x00000000        0x0 UTFT/ssd1289.o
+ .bss           0x00000000        0x0 UTFT/ssd1289.o
+ .text          0x00000000        0x0 UTFT/UTFT.o
+ .data          0x00000000        0x0 UTFT/UTFT.o
+ .bss           0x00000000        0x0 UTFT/UTFT.o
  .text._ZN4UTFT5clrXYEv
-                0x00000000       0x62 UTFT.o
+                0x00000000       0x62 UTFT/UTFT.o
  .text._ZN4UTFT8fillRectEiiii
-                0x00000000       0xc0 UTFT.o
+                0x00000000       0xc0 UTFT/UTFT.o
  .text._ZN4UTFT10drawCircleEiii
-                0x00000000      0x280 UTFT.o
+                0x00000000      0x280 UTFT/UTFT.o
  .text._ZN4UTFT9setPixelsEjjjm
-                0x00000000       0x50 UTFT.o
+                0x00000000       0x50 UTFT/UTFT.o
  .text._ZN4UTFT8setColorEj
-                0x00000000        0x8 UTFT.o
+                0x00000000        0x8 UTFT/UTFT.o
  .text._ZN4UTFT8getColorEv
-                0x00000000       0x14 UTFT.o
+                0x00000000       0x14 UTFT/UTFT.o
  .text._ZN4UTFT12setBackColorEj
-                0x00000000        0x8 UTFT.o
+                0x00000000        0x8 UTFT/UTFT.o
  .text._ZN4UTFT12getBackColorEv
-                0x00000000       0x14 UTFT.o
+                0x00000000       0x14 UTFT/UTFT.o
  .text._ZN4UTFT9drawPixelEii
-                0x00000000       0x3c UTFT.o
+                0x00000000       0x3c UTFT/UTFT.o
  .text._ZN4UTFT10fillCircleEiii
-                0x00000000       0xcc UTFT.o
+                0x00000000       0xcc UTFT/UTFT.o
  .text._ZN4UTFT8drawRectEiiii
-                0x00000000       0x92 UTFT.o
+                0x00000000       0x92 UTFT/UTFT.o
  .text._ZN4UTFT13drawRoundRectEiiii
-                0x00000000      0x14c UTFT.o
+                0x00000000      0x14c UTFT/UTFT.o
  .text._ZN4UTFT9printNumFEdhiicic
-                0x00000000      0x3e6 UTFT.o
+                0x00000000      0x3e6 UTFT/UTFT.o
  .text._ZN4UTFT7getFontEv
-                0x00000000        0x8 UTFT.o
+                0x00000000        0x8 UTFT/UTFT.o
  .text._ZN4UTFT12getFontXsizeEv
-                0x00000000        0x6 UTFT.o
+                0x00000000        0x6 UTFT/UTFT.o
  .text._ZN4UTFT12getFontYsizeEv
-                0x00000000        0x6 UTFT.o
+                0x00000000        0x6 UTFT/UTFT.o
  .text._ZN4UTFT10drawBitmapEiiiiPKji
-                0x00000000      0x342 UTFT.o
+                0x00000000      0x342 UTFT/UTFT.o
  .text._ZN4UTFT12drawBitmapPBEiiiiPKj
-                0x00000000      0x122 UTFT.o
+                0x00000000      0x122 UTFT/UTFT.o
  .text._ZN4UTFT10drawBitmapEiiiiPKjiii
-                0x00000000      0x266 UTFT.o
+                0x00000000      0x266 UTFT/UTFT.o
  .text._ZN4UTFT6lcdOffEv
-                0x00000000        0x2 UTFT.o
+                0x00000000        0x2 UTFT/UTFT.o
  .text._ZN4UTFT5lcdOnEv
-                0x00000000        0x2 UTFT.o
+                0x00000000        0x2 UTFT/UTFT.o
  .text._ZN4UTFT11setContrastEc
-                0x00000000        0x2 UTFT.o
+                0x00000000        0x2 UTFT/UTFT.o
  .text._ZN4UTFT15getDisplayXSizeEv
-                0x00000000       0x22 UTFT.o
+                0x00000000       0x22 UTFT/UTFT.o
  .text._ZN4UTFT15getDisplayYSizeEv
-                0x00000000       0x22 UTFT.o
+                0x00000000       0x22 UTFT/UTFT.o
  .text          0x00000000        0x0 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .data          0x00000000        0x0 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .bss           0x00000000        0x0 d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
@@ -445,15 +445,15 @@ user_signatures  0x00850000         0x00000400         rw !x
 Linker script and memory map
 
 LOAD D:/Atmega Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega16a/avr5/crtatmega16a.o
-LOAD color.o
-LOAD DefaultFonts.o
-LOAD fastbitmap.o
-LOAD fastfill.o
-LOAD fastio.o
-LOAD fastline.o
 LOAD main.o
-LOAD ssd1289.o
-LOAD UTFT.o
+LOAD UTFT/color.o
+LOAD UTFT/DefaultFonts.o
+LOAD UTFT/fastbitmap.o
+LOAD UTFT/fastfill.o
+LOAD UTFT/fastio.o
+LOAD UTFT/fastline.o
+LOAD UTFT/ssd1289.o
+LOAD UTFT/UTFT.o
 START GROUP
 LOAD d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP
@@ -584,10 +584,10 @@ END GROUP
  *libc.a:*(.progmem.data)
  *(.progmem*)
  .progmem.data.BigFont
-                0x00000072      0xbe4 DefaultFonts.o
+                0x00000072      0xbe4 UTFT/DefaultFonts.o
                 0x00000072                BigFont
  .progmem.data.SmallFont
-                0x00000c56      0x478 DefaultFonts.o
+                0x00000c56      0x478 UTFT/DefaultFonts.o
                 0x00000c56                SmallFont
                 0x000010ce                . = ALIGN (0x2)
  *(.jumptables)
@@ -655,20 +655,20 @@ END GROUP
                 0x00001120                __vector_16
                 0x00001120                __vector_18
                 0x00001120                __vector_20
- .text          0x00001124      0x11e fastbitmap.o
+ .text          0x00001124      0x11e UTFT/fastbitmap.o
                 0x00001124                fastbitmap_1bit
                 0x000011d4                fastbitmap_16bit
                 0x000011fe                fastbitmap_pb565
- .text          0x00001242       0x92 fastfill.o
+ .text          0x00001242       0x92 UTFT/fastfill.o
                 0x00001242                fastfill
                 0x000012c4                fastfill3
- .text          0x000012d4       0x4a fastio.o
+ .text          0x000012d4       0x4a UTFT/fastio.o
                 0x000012d4                LCD_Write_COM
                 0x000012e2                LCD_Write_DATA
                 0x000012ee                LCD_Write_DATA2
                 0x000012fc                LCD_Write_COM_DATA
                 0x00001314                LCD_Writ_Bus
- .text          0x0000131e      0x460 fastline.o
+ .text          0x0000131e      0x460 UTFT/fastline.o
                 0x0000131e                fastlineAPP
                 0x000013aa                fastlineAPN
                 0x00001436                fastlineANP
@@ -707,65 +707,65 @@ END GROUP
  .text._GLOBAL__sub_I_display
                 0x0000239c        0xe main.o
  .text.SSD1289_init
-                0x000023aa      0x21a ssd1289.o
+                0x000023aa      0x21a UTFT/ssd1289.o
                 0x000023aa                SSD1289_init
  .text._ZN4UTFTC2Ev
-                0x000025c4       0x28 UTFT.o
+                0x000025c4       0x28 UTFT/UTFT.o
                 0x000025c4                _ZN4UTFTC1Ev
                 0x000025c4                _ZN4UTFTC2Ev
  .text._ZN4UTFT5setXYEjjjj
-                0x000025ec       0x8c UTFT.o
+                0x000025ec       0x8c UTFT/UTFT.o
                 0x000025ec                _ZN4UTFT5setXYEjjjj
  .text._ZN4UTFT6clrScrEv
-                0x00002678       0x6c UTFT.o
+                0x00002678       0x6c UTFT/UTFT.o
                 0x00002678                _ZN4UTFT6clrScrEv
  .text._ZN4UTFT7fillScrEj
-                0x000026e4       0x78 UTFT.o
+                0x000026e4       0x78 UTFT/UTFT.o
                 0x000026e4                _ZN4UTFT7fillScrEj
  .text._ZN4UTFT7fillScrEhhh
-                0x0000275c       0x2a UTFT.o
+                0x0000275c       0x2a UTFT/UTFT.o
                 0x0000275c                _ZN4UTFT7fillScrEhhh
  .text._ZN4UTFT8setColorEhhh
-                0x00002786       0x46 UTFT.o
+                0x00002786       0x46 UTFT/UTFT.o
                 0x00002786                _ZN4UTFT8setColorEhhh
  .text._ZN4UTFT12setBackColorEhhh
-                0x000027cc       0x4a UTFT.o
+                0x000027cc       0x4a UTFT/UTFT.o
                 0x000027cc                _ZN4UTFT12setBackColorEhhh
  .text._ZN4UTFT7InitLCDEh
-                0x00002816       0x28 UTFT.o
+                0x00002816       0x28 UTFT/UTFT.o
                 0x00002816                _ZN4UTFT7InitLCDEh
  .text._ZN4UTFT8setPixelEj
-                0x0000283e        0x8 UTFT.o
+                0x0000283e        0x8 UTFT/UTFT.o
                 0x0000283e                _ZN4UTFT8setPixelEj
  .text._ZN4UTFT9drawHLineEiii
-                0x00002846       0x62 UTFT.o
+                0x00002846       0x62 UTFT/UTFT.o
                 0x00002846                _ZN4UTFT9drawHLineEiii
  .text._ZN4UTFT13fillRoundRectEiiii
-                0x000028a8      0x13c UTFT.o
+                0x000028a8      0x13c UTFT/UTFT.o
                 0x000028a8                _ZN4UTFT13fillRoundRectEiiii
  .text._ZN4UTFT9drawVLineEiii
-                0x000029e4       0x62 UTFT.o
+                0x000029e4       0x62 UTFT/UTFT.o
                 0x000029e4                _ZN4UTFT9drawVLineEiii
  .text._ZN4UTFT8drawLineEiiii
-                0x00002a46      0x2e6 UTFT.o
+                0x00002a46      0x2e6 UTFT/UTFT.o
                 0x00002a46                _ZN4UTFT8drawLineEiiii
  .text._ZN4UTFT9printCharEhii
-                0x00002d2c      0x1f2 UTFT.o
+                0x00002d2c      0x1f2 UTFT/UTFT.o
                 0x00002d2c                _ZN4UTFT9printCharEhii
  .text._ZN4UTFT10rotateCharEhiiii
-                0x00002f1e      0x2de UTFT.o
+                0x00002f1e      0x2de UTFT/UTFT.o
                 0x00002f1e                _ZN4UTFT10rotateCharEhiiii
  .text._ZN4UTFT5printEPKciii
-                0x000031fc      0x1b6 UTFT.o
+                0x000031fc      0x1b6 UTFT/UTFT.o
                 0x000031fc                _ZN4UTFT5printEPKciii
  .text._ZN4UTFT15printWithMarginEPKciii
-                0x000033b2      0x1b4 UTFT.o
+                0x000033b2      0x1b4 UTFT/UTFT.o
                 0x000033b2                _ZN4UTFT15printWithMarginEPKciii
  .text._ZN4UTFT9printNumIEhiiic
-                0x00003566      0x186 UTFT.o
+                0x00003566      0x186 UTFT/UTFT.o
                 0x00003566                _ZN4UTFT9printNumIEhiiic
  .text._ZN4UTFT7setFontEPKh
-                0x000036ec       0x36 UTFT.o
+                0x000036ec       0x36 UTFT/UTFT.o
                 0x000036ec                _ZN4UTFT7setFontEPKh
  .text.avr-libc.fplib
                 0x00003722        0xe d:/atmega studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
@@ -955,11 +955,11 @@ END GROUP
 
 .comment        0x00000000       0x30
  *(.comment)
- .comment       0x00000000       0x30 DefaultFonts.o
+ .comment       0x00000000       0x30 main.o
                                  0x31 (size before relaxing)
- .comment       0x00000030       0x31 main.o
- .comment       0x00000030       0x31 ssd1289.o
- .comment       0x00000030       0x31 UTFT.o
+ .comment       0x00000030       0x31 UTFT/DefaultFonts.o
+ .comment       0x00000030       0x31 UTFT/ssd1289.o
+ .comment       0x00000030       0x31 UTFT/UTFT.o
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x3c
@@ -984,84 +984,84 @@ END GROUP
 .debug_aranges  0x00000000      0x290
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x18 DefaultFonts.o
+                0x00000000       0x68 main.o
  .debug_aranges
-                0x00000018       0x20 fastbitmap.o
+                0x00000068       0x18 UTFT/DefaultFonts.o
  .debug_aranges
-                0x00000038       0x20 fastfill.o
+                0x00000080       0x20 UTFT/fastbitmap.o
  .debug_aranges
-                0x00000058       0x20 fastio.o
+                0x000000a0       0x20 UTFT/fastfill.o
  .debug_aranges
-                0x00000078       0x20 fastline.o
+                0x000000c0       0x20 UTFT/fastio.o
  .debug_aranges
-                0x00000098       0x68 main.o
+                0x000000e0       0x20 UTFT/fastline.o
  .debug_aranges
-                0x00000100       0x20 ssd1289.o
+                0x00000100       0x20 UTFT/ssd1289.o
  .debug_aranges
-                0x00000120      0x170 UTFT.o
+                0x00000120      0x170 UTFT/UTFT.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x6869
+.debug_info     0x00000000     0x6875
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x52e D:/Atmega Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega16a/avr5/crtatmega16a.o
- .debug_info    0x0000052e       0xe5 DefaultFonts.o
- .debug_info    0x00000613       0x86 fastbitmap.o
- .debug_info    0x00000699       0x84 fastfill.o
- .debug_info    0x0000071d       0x82 fastio.o
- .debug_info    0x0000079f       0x84 fastline.o
- .debug_info    0x00000823     0x20d6 main.o
- .debug_info    0x000028f9      0x699 ssd1289.o
- .debug_info    0x00002f92     0x38d7 UTFT.o
+ .debug_info    0x0000052e     0x20d6 main.o
+ .debug_info    0x00002604       0xe5 UTFT/DefaultFonts.o
+ .debug_info    0x000026e9       0x89 UTFT/fastbitmap.o
+ .debug_info    0x00002772       0x87 UTFT/fastfill.o
+ .debug_info    0x000027f9       0x85 UTFT/fastio.o
+ .debug_info    0x0000287e       0x87 UTFT/fastline.o
+ .debug_info    0x00002905      0x699 UTFT/ssd1289.o
+ .debug_info    0x00002f9e     0x38d7 UTFT/UTFT.o
 
 .debug_abbrev   0x00000000      0xd34
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4e7 D:/Atmega Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega16a/avr5/crtatmega16a.o
- .debug_abbrev  0x000004e7       0x5d DefaultFonts.o
- .debug_abbrev  0x00000544       0x14 fastbitmap.o
- .debug_abbrev  0x00000558       0x14 fastfill.o
- .debug_abbrev  0x0000056c       0x14 fastio.o
- .debug_abbrev  0x00000580       0x14 fastline.o
- .debug_abbrev  0x00000594      0x368 main.o
- .debug_abbrev  0x000008fc       0xf2 ssd1289.o
- .debug_abbrev  0x000009ee      0x346 UTFT.o
+ .debug_abbrev  0x000004e7      0x368 main.o
+ .debug_abbrev  0x0000084f       0x5d UTFT/DefaultFonts.o
+ .debug_abbrev  0x000008ac       0x14 UTFT/fastbitmap.o
+ .debug_abbrev  0x000008c0       0x14 UTFT/fastfill.o
+ .debug_abbrev  0x000008d4       0x14 UTFT/fastio.o
+ .debug_abbrev  0x000008e8       0x14 UTFT/fastline.o
+ .debug_abbrev  0x000008fc       0xf2 UTFT/ssd1289.o
+ .debug_abbrev  0x000009ee      0x346 UTFT/UTFT.o
 
-.debug_line     0x00000000     0x1f7a
+.debug_line     0x00000000     0x1f99
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x115 D:/Atmega Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega16a/avr5/crtatmega16a.o
- .debug_line    0x00000115       0x80 DefaultFonts.o
- .debug_line    0x00000195      0x1e9 fastbitmap.o
- .debug_line    0x0000037e      0x16f fastfill.o
- .debug_line    0x000004ed       0xef fastio.o
- .debug_line    0x000005dc       0x69 fastline.o
- .debug_line    0x00000645      0x5d8 main.o
- .debug_line    0x00000c1d      0x264 ssd1289.o
- .debug_line    0x00000e81     0x10f9 UTFT.o
+ .debug_line    0x00000115      0x5e2 main.o
+ .debug_line    0x000006f7       0x83 UTFT/DefaultFonts.o
+ .debug_line    0x0000077a      0x1ec UTFT/fastbitmap.o
+ .debug_line    0x00000966      0x172 UTFT/fastfill.o
+ .debug_line    0x00000ad8       0xf2 UTFT/fastio.o
+ .debug_line    0x00000bca       0x6c UTFT/fastline.o
+ .debug_line    0x00000c36      0x267 UTFT/ssd1289.o
+ .debug_line    0x00000e9d     0x10fc UTFT/UTFT.o
 
 .debug_frame    0x00000000      0xa44
  *(.debug_frame)
  .debug_frame   0x00000000      0x184 main.o
- .debug_frame   0x00000184       0x24 ssd1289.o
- .debug_frame   0x000001a8      0x89c UTFT.o
+ .debug_frame   0x00000184       0x24 UTFT/ssd1289.o
+ .debug_frame   0x000001a8      0x89c UTFT/UTFT.o
 
-.debug_str      0x00000000      0xdff
+.debug_str      0x00000000      0xe08
  *(.debug_str)
  .debug_str     0x00000000      0x1af D:/Atmega Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega16a/avr5/crtatmega16a.o
- .debug_str     0x000001af      0x173 DefaultFonts.o
-                                0x1a7 (size before relaxing)
- .debug_str     0x00000322      0x946 main.o
+ .debug_str     0x000001af      0x9ea main.o
                                 0xa3e (size before relaxing)
- .debug_str     0x00000c68       0x3d ssd1289.o
-                                0x1f0 (size before relaxing)
- .debug_str     0x00000ca5      0x15a UTFT.o
-                                0x973 (size before relaxing)
+ .debug_str     0x00000b99       0xd2 UTFT/DefaultFonts.o
+                                0x1aa (size before relaxing)
+ .debug_str     0x00000c6b       0x40 UTFT/ssd1289.o
+                                0x1f3 (size before relaxing)
+ .debug_str     0x00000cab      0x15d UTFT/UTFT.o
+                                0x976 (size before relaxing)
 
 .debug_loc      0x00000000     0x4299
  *(.debug_loc)
  .debug_loc     0x00000000      0x6e0 main.o
- .debug_loc     0x000006e0       0xd2 ssd1289.o
- .debug_loc     0x000007b2     0x3ae7 UTFT.o
+ .debug_loc     0x000006e0       0xd2 UTFT/ssd1289.o
+ .debug_loc     0x000007b2     0x3ae7 UTFT/UTFT.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1084,8 +1084,8 @@ END GROUP
 .debug_ranges   0x00000000      0x1f8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x58 main.o
- .debug_ranges  0x00000058       0x10 ssd1289.o
- .debug_ranges  0x00000068      0x190 UTFT.o
+ .debug_ranges  0x00000058       0x10 UTFT/ssd1289.o
+ .debug_ranges  0x00000068      0x190 UTFT/UTFT.o
 
 .debug_macro
  *(.debug_macro)

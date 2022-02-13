@@ -1,17 +1,32 @@
-fastbitmap.d fastbitmap.o: .././fastbitmap.S \
+UTFT/ssd1289.d UTFT/ssd1289.o: ../UTFT/ssd1289.c ../UTFT/config.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
+ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
+ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h \
+ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h \
  D:\Atmega\ Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include/avr/iom16a.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\portpins.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\common.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- .././config.h .././as_macros.h
+ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
+ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
+ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
+ ../UTFT/ssd1289.h ../UTFT/fastio.h ../UTFT/fastline.h \
+ ../UTFT/fastbitmap.h ../UTFT/fastfill.h
+
+../UTFT/config.h:
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h:
+
+d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h:
+
+d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h:
+
+d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h:
 
 D:\Atmega\ Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include/avr/iom16a.h:
 
@@ -25,6 +40,18 @@ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h:
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
 
-.././config.h:
+d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
 
-.././as_macros.h:
+d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
+
+d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
+
+../UTFT/ssd1289.h:
+
+../UTFT/fastio.h:
+
+../UTFT/fastline.h:
+
+../UTFT/fastbitmap.h:
+
+../UTFT/fastfill.h:

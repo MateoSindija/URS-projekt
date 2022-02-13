@@ -13,15 +13,15 @@ main.d main.o: .././main.cpp \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
- .././UTFT.h .././config.h \
+ .././UTFT/UTFT.h .././UTFT/config.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h \
- .././color.h .././DefaultFonts.h \
+ .././UTFT/color.h .././UTFT/DefaultFonts.h \
  d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\pgmspace.h \
- .././ssd1289.h .././fastio.h .././fastline.h .././fastbitmap.h \
- .././fastfill.h
+ .././UTFT/ssd1289.h .././UTFT/fastio.h .././UTFT/fastline.h \
+ .././UTFT/fastbitmap.h .././UTFT/fastfill.h
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -51,9 +51,9 @@ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h:
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h:
 
-.././UTFT.h:
+.././UTFT/UTFT.h:
 
-.././config.h:
+.././UTFT/config.h:
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
 
@@ -63,18 +63,18 @@ d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_b
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h:
 
-.././color.h:
+.././UTFT/color.h:
 
-.././DefaultFonts.h:
+.././UTFT/DefaultFonts.h:
 
 d:\atmega\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\pgmspace.h:
 
-.././ssd1289.h:
+.././UTFT/ssd1289.h:
 
-.././fastio.h:
+.././UTFT/fastio.h:
 
-.././fastline.h:
+.././UTFT/fastline.h:
 
-.././fastbitmap.h:
+.././UTFT/fastbitmap.h:
 
-.././fastfill.h:
+.././UTFT/fastfill.h:
