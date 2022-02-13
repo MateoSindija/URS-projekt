@@ -133,21 +133,24 @@ const char score[10][6] = {
 */
 
 void displayCorrect() {
+	
 	display.clrScr();
 	display.setFont(BigFont);
 	display.fillScr(BLUE);
 	display.setBackColor(BLUE);
+	
 	if (step == 5) {
 		display.printWithMargin("OSIGURALI STE", SECURED);
 		display.printWithMargin("16k KN", MESSAGE_16K);
 		_delay_ms(2000);
-		} else if (step == 10) {
+	} else if (step == 10) {
 		display.print("MILIJUNAS", MILLIONARE);
 		step = 0;
 		_delay_ms(10000);
-		} else if (step == 0) {
+	} else if (step == 0) {
 		display.print("NETOCNO", CORRECT);
 	} else display.print("TOCNO", INCORRECT);
+	
 	display.setFont(SmallFont);
 	_delay_ms(1000);
 	display.clrScr();
@@ -171,6 +174,7 @@ void drawScoreHighlight() {
 */
 
 void displayGUI(uint8_t jokerFifty = 0) {
+	
 	display.drawLine(TOP_HORIZONTAL_LINE); // Top horizontal line
 	display.drawLine(MIDDLE_VERTICAL_LINE); // Middle vertical line
 	display.drawLine(MIDDLE_HORIZONTAL_LINE); // Middle horizontal line line
@@ -182,17 +186,19 @@ void displayGUI(uint8_t jokerFifty = 0) {
 		if (1 == questionsEasy[step].correctAns) {
 			display.print("A:", A_COORDINATE);
 			display.print("D:", D_COORDINATE);
-			} else if (2 == questionsEasy[step].correctAns) {
+		} else if (2 == questionsEasy[step].correctAns) {
 			display.print("C:", C_COORDINATE);
 			display.print("D:", D_COORDINATE);
-			} else if (3 == questionsEasy[step].correctAns) {
+		} else if (3 == questionsEasy[step].correctAns) {
 			display.print("B:", B_COORDINATE);
 			display.print("A:", A_COORDINATE);
-			} else {
+		} else {
 			display.print("B:", B_COORDINATE);
 			display.print("D:", D_COORDINATE);
 		}
-		} else {
+		
+	} else {
+		
 		display.print("A:", A_COORDINATE);
 		display.print("B:", B_COORDINATE);
 		display.print("C:", C_COORDINATE);
@@ -209,24 +215,26 @@ void displayGUI(uint8_t jokerFifty = 0) {
 */
 
 void displayQuestion(objectQuestion questionObj, uint8_t * jokerFiftyUsed = 0, uint8_t jokerFifty = 0) {
+	
 	display.printWithMargin(questionObj.question, 2, 0);
 	if (jokerFifty) {
 		( * jokerFiftyUsed) = 1;
+		
 		if (1 == questionObj.correctAns) {
 			display.printWithMargin(questionObj.a, A_OPTION_COORDINATE);
 			display.printWithMargin(questionObj.d, D_OPTION_COORDINATE);
-			} else if (2 == questionObj.correctAns) {
+		} else if (2 == questionObj.correctAns) {
 			display.printWithMargin(questionObj.b, B_OPTION_COORDINATE);
 			display.printWithMargin(questionObj.c, C_OPTION_COORDINATE);
-			} else if (3 == questionObj.correctAns) {
+		} else if (3 == questionObj.correctAns) {
 			display.printWithMargin(questionObj.c, C_OPTION_COORDINATE);
 			display.printWithMargin(questionObj.a, A_OPTION_COORDINATE);
-			} else {
+		} else {
 			display.printWithMargin(questionObj.b, B_OPTION_COORDINATE);
 			display.printWithMargin(questionObj.d, D_OPTION_COORDINATE);
-
 		}
-		} else {
+		
+	} else {
 		display.printWithMargin(questionObj.a, A_OPTION_COORDINATE);
 		display.printWithMargin(questionObj.b, B_OPTION_COORDINATE);
 		display.printWithMargin(questionObj.c, C_OPTION_COORDINATE);
@@ -245,7 +253,7 @@ void displayScore() {
 			display.print(score[i], 10 + (i * 50), 221);
 			display.print("->", RIGHT_ARROW);
 		}
-		} else if (step >= 5 && step < 10) {
+	} else if (step >= 5 && step < 10) {
 		for (uint8_t i = 5; i < 10; i++) {
 			display.print(score[i], 10 + (i - 5) * 50, 221);
 		}
@@ -268,7 +276,7 @@ void checkAnswer(uint8_t * ans, objectQuestion questionsObj, uint8_t * jokerFift
 		drawScoreHighlight();
 		* ans = 0;
 		tS = EXPIRATION_TIME;
-		} else {
+	} else {
 		* jokerFiftyUsed = 0;
 		step = 0;
 		displayCorrect();
@@ -294,10 +302,10 @@ ISR(TIMER0_COMP_vect) {
 
 		if (tS < 0 ) tS = EXPIRATION_TIME;
 	}
-
 }
 
 int main() {
+	
 	//SET PORTS
 	PORTB = 0xff;
 	DDRB = 0x00;
@@ -343,19 +351,19 @@ int main() {
 			ans = 1;
 			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
-			} else if (bit_is_clear(PINB, 1)) {
+		} else if (bit_is_clear(PINB, 1)) {
 			ans = 2;
 			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
-			} else if (bit_is_clear(PINB, 2)) {
+		} else if (bit_is_clear(PINB, 2)) {
 			ans = 3;
 			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
-			} else if (bit_is_clear(PINB, 3)) {
+		} else if (bit_is_clear(PINB, 3)) {
 			ans = 4;
 			_delay_ms(DEBOUNCE);
 			checkAnswer( & ans, questionsEasy[step], & jokerFiftyUsed);
-			} else if (bit_is_clear(PINB, 4) && !jokerFiftyUsed) {
+		} else if (bit_is_clear(PINB, 4) && !jokerFiftyUsed) {
 
 			display.clrScr();
 			display.fillScr(BLUE);
